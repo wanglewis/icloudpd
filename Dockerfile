@@ -1,7 +1,7 @@
 FROM alpine:3.9
 
 RUN set -xe && \
-    apk add --no-cache python3 tzdata && \
+    apk add --no-cache python3 tzdata git && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
