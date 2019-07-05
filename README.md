@@ -1,6 +1,8 @@
 # icloudpd
 - source:  
 `https://github.com/shuixin536/icloud_photos_downloader`
+`https://github.com/shuixin536/pyicloud`
+`https://github.com/ndbroadbent/pyicloud`
 
 - use:  
 `docker pull shuixin536/icloudpd`
