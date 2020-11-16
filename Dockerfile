@@ -8,8 +8,7 @@ RUN set -xe && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache && \
-    pip install git+https://github.com/shuixin536/pyicloud.git@c0ee734a571eae0c6946c2f3259b8af046ffa2ec && \
-    pip install git+https://github.com/shuixin536/icloud_photos_downloader.git@1867d74a8da04344a99dea10766f0d7cf6fbbd64 && \
+    pip install icloudpd && \
     icloudpd --version && \
     icloud -h | head -n1
 
