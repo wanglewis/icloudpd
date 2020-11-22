@@ -12,7 +12,7 @@ RUN set -xe && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache && \
     pip3 install icloudpd && \
-    pip3 install ${PYTHONDEPENDENCIES} && \
+    pip3 install --use-feature=2020-resolver ${PYTHONDEPENDENCIES} && \
     icloudpd --version && \
     icloud -h | head -n1
 
