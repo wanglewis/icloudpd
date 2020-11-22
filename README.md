@@ -17,7 +17,7 @@ additional commandline options see:
 | ------ | ------ |
 | USERNAME | icloud user name |
 | TZ | Timezone | 
-| CRON | 0 */6 * * * | 
+| CRON | * * * * * for crontab| 
 | CLIFOPTIONS  | This is for additional commandline options you want to pass to the icloudpd application. |  
 | FOLDERSTRUCTURE  | folder structure, such as {:%Y/%m/%d} OR {:%Y/%m} |
 
