@@ -18,6 +18,7 @@
 
 - volume:  
 `/data`
+
 `/config`
 
 - env:  
@@ -28,5 +29,5 @@
 | TZ | Asia/Shanghai | 
 | CRON | 0 */6 * * * | 
 | CLIFOPTION  | CODE OPTIONS FROM icloudpd |
-
+| FOLDERSTRUCTURE  | {:%Y/%m/%d} OR {:%Y/%m} |
 
