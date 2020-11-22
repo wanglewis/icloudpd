@@ -1,9 +1,5 @@
 FROM alpine:3.9
 
-COPY icloud.sh /home/icloud.sh
-COPY entry.sh /home/entry.sh
-COPY savepassword.sh /home/savepassword.sh
-
 RUN set -xe && \
     apk add --no-cache python3 tzdata git && \
     python3 -m ensurepip && \
