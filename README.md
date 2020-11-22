@@ -1,7 +1,7 @@
 # icloudpd
  
 additional commandline options see:
-~~https://github.com/shuixin536/icloud_photos_downloader~~
+https://github.com/shuixin536/icloud_photos_downloader
 
 
 - use:  
