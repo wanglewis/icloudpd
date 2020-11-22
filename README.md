@@ -28,6 +28,6 @@
 | USERNAME | uuuuuu |
 | TZ | Asia/Shanghai | 
 | CRON | 0 */6 * * * | 
-| CLIFOPTION  | CODE OPTIONS FROM icloudpd |
+| CLIFOPTIONS  | CODE OPTIONS FROM icloudpd |
 | FOLDERSTRUCTURE  | {:%Y/%m/%d} OR {:%Y/%m} |
 
