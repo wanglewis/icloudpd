@@ -1,7 +1,5 @@
 FROM alpine:3.9
 
-ENV PYTHONDEPENDENCIES="docopt piexif click==6.0 certifi pytz tzlocal six chardet idna urllib3 requests future keyrings.alt==1.0 keyring==8.0 pyicloud-ipd tqdm schema python-dateutil" 
-
 RUN set -xe && \
     apk add --no-cache python3 tzdata git && \
     python3 -m ensurepip && \
@@ -12,7 +10,7 @@ RUN set -xe && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache && \
     pip3 install icloudpd && \
-    pip3 install --use-feature=2020-resolver ${PYTHONDEPENDENCIES} && \
+    pip3 install pyicloud && \
     icloudpd --version && \
     icloud -h | head -n1
 
