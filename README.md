@@ -1,33 +1,23 @@
 # icloudpd
-- source:  
-
+ 
+additional commandline options see:
 ~~https://github.com/shuixin536/icloud_photos_downloader~~
 
-~~https://github.com/shuixin536/pyicloud~~
-
-~~https://github.com/ndbroadbent/pyicloud~~
-
-`https://github.com/icloud-photos-downloader/icloud_photos_downloader`
-
-需要直接安装即可
-
-`pip install icloudpd`
 
 - use:  
-`docker pull wanglewis/icloudpd`
+`docker pull wanglewis/icloudpd:latest`
 
 - volume:  
-`/data`
-
-`/config`
+`/data` for photos
+`/config` for cookies
 
 - env:  
 
 | key | value |
 | ------ | ------ |
-| USERNAME | uuuuuu |
-| TZ | Asia/Shanghai | 
+| USERNAME | icloud user name |
+| TZ | Timezone | 
 | CRON | 0 */6 * * * | 
-| CLIFOPTIONS  | CODE OPTIONS FROM icloudpd |
-| FOLDERSTRUCTURE  | {:%Y/%m/%d} OR {:%Y/%m} |
+| CLIFOPTIONS  | This is for additional commandline options you want to pass to the icloudpd application. |  
+| FOLDERSTRUCTURE  | folder structure, such as {:%Y/%m/%d} OR {:%Y/%m} |
 
