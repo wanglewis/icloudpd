@@ -14,10 +14,11 @@
 `pip install icloudpd`
 
 - use:  
-`docker pull shuixin536/icloudpd`
+`docker pull wanglewis/icloudpd`
 
 - volume:  
 `/data`
+`/config`
 
 - env:  
 
