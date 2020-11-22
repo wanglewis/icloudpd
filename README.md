@@ -21,3 +21,4 @@ https://github.com/icloud-photos-downloader/icloud_photos_downloader
 | CLIFOPTIONS  | This is for additional commandline options you want to pass to the icloudpd application. |  
 | FOLDERSTRUCTURE  | folder structure, such as {:%Y/%m/%d} OR {:%Y/%m} |
 
+run /home/savepassword.sh and follow the steps to save your password in keyring
