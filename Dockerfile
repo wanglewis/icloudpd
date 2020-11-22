@@ -1,5 +1,9 @@
 FROM alpine:3.9
 
+COPY icloud.sh /home/icloud.sh
+COPY entry.sh /home/entry.sh
+COPY savepassword.sh /home/savepassword.sh
+
 RUN set -xe && \
     apk add --no-cache python3 tzdata git && \
     python3 -m ensurepip && \
@@ -8,7 +12,8 @@ RUN set -xe && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache && \
-    pip install icloudpd && \
+    pip3 install icloudpd && \
+    pip3 install "docopt piexif click==6.0 certifi pytz tzlocal six chardet idna urllib3 requests future keyrings.alt==1.0 keyring==8.0 pyicloud-ipd tqdm schema python-dateutil" && \
     icloudpd --version && \
     icloud -h | head -n1
 
