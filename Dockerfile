@@ -16,9 +16,9 @@ RUN set -xe && \
     echo -e "#!/bin/sh\nicloudpd --directory /data --cookie-directory /config --username \${USERNAME} --folder-structure \${FOLDERSTRUCTURE} \${CLIFOPTIONS} " > /home/icloud.sh && \
     chmod +x /home/icloud.sh && \
     echo -e "#!/bin/sh\ncp /usr/share/zoneinfo/\${TZ} /etc/localtime\necho -e \"\${CRON} /home/icloud.sh\" > /home/icloud.crontab\n/usr/bin/crontab /home/icloud.crontab\n/usr/sbin/crond -f -l 8" > /home/entry.sh && \
-    chmod +x /home/entry.sh
+    chmod +x /home/entry.sh && \
     echo -e "#!/bin/sh\nicloudpd --username \${USERNAME} " > /home/savepassword.sh && \
-    chmod +x /home/savepassword.sh && \
+    chmod +x /home/savepassword.sh
     
     
     
