@@ -24,7 +24,7 @@
 
 | key | value |
 | ------ | ------ |
-| username | uuuuuu |
+| USERNAME | uuuuuu |
 | TZ | Asia/Shanghai | 
 | CRON | 0 */6 * * * | 
 | CLIFOPTION  | CODE OPTIONS FROM icloudpd |
