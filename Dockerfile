@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:latest
 
 RUN set -xe && \
     apk add --no-cache python3 tzdata git && \
