@@ -5,9 +5,6 @@ ENV REQUIREMENTS="python3 py-pip exiftool coreutils tzdata curl" \
     PYTHONDEPENDENCIES="docopt piexif click==6.0 certifi pytz tzlocal six chardet idna urllib3 requests future keyrings.alt==1.0 keyring==8.0 pyicloud-ipd tqdm schema python-dateutil" \
     REPO="ndbroadbent/icloud_photos_downloader"
 
-COPY sync-icloud.sh /usr/local/bin/sync-icloud.sh
-COPY healthcheck.sh /usr/local/bin/healthcheck.sh
-
 RUN echo "$(date '+%d/%m/%Y - %H:%M:%S') | Install build dependencies" && \
    apk add --no-cache --no-progress --virtual=build-deps ${BUILDDEPENDENCIES} && \
 echo "$(date '+%d/%m/%Y - %H:%M:%S') | Install requirements" && \
@@ -32,4 +29,4 @@ RUN set -xe && \
     echo -e "#!/bin/sh\nicloud --username \${USERNAME} " > /usr/local/bin/savepassword.sh && \
     chmod +x /usr/local/bin/savepassword.sh
         
-CMD ["/usr/local/bin/entry.sh && /bin/sh"]
+CMD ["/usr/local/bin/entry.sh"]
