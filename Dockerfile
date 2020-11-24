@@ -21,7 +21,6 @@ echo "$(date '+%d/%m/%Y - %H:%M:%S') | Install ${REPO}" && \
    cd "${TEMP}" && \
    python3 setup.py install && \
 echo "$(date '+%d/%m/%Y - %H:%M:%S') | Set permissions on startup script, clean up and exit" && \
-   chmod +x /usr/local/bin/sync-icloud.sh /usr/local/bin/healthcheck.sh && \
    rm -r "${TEMP}" && \
    apk del --no-progress --purge build-deps
 
