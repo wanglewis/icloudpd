@@ -7,16 +7,14 @@ RUN set -xe && \
     pip3 install --upgrade pip setuptools && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
-    rm -r /root/.cache
+    rm -r /root/.cache 
 
-ARG ICLOUDPD_VERSION
-
-COPY dist/* /tmp
 RUN set -xe \
   && pip install wheel==0.35.1 \
-  && pip install /tmp/icloudpd-${ICLOUDPD_VERSION}-py2.py3-none-any.whl \
+  && pip install icloudpd \
   && icloudpd --version \
   && icloud -h | head -n1
+
 
 RUN set -xe && \
     echo -e "#!/bin/sh\nicloudpd --directory /data --cookie-directory /config --username \${USERNAME} --folder-structure \${FOLDERSTRUCTURE} \${CLIFOPTIONS} " > /home/icloud.sh && \
